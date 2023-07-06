@@ -5,4 +5,11 @@
 
 body {
     font-family: $font-base;
+
+    a {
+        text-decoration: none;
+    }
 }
+
+@import "./home/nav.scss";
+@import "./home/navLog.scss";
