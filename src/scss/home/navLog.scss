@@ -1,0 +1,18 @@
+.navLog{
+    width: 100vh;
+    font-size: 14px;
+    margin-top: 46px;
+    display: flex;
+    justify-content: flex-end;
+
+    .navLog_link{
+        color: $color-grey;
+        margin-left: 20px;
+        padding: 10px;
+
+        &:hover{
+            border: 0.75px solid $color-orange;
+            padding: 9px;
+        }
+    }
+}

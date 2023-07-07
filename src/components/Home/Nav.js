@@ -7,11 +7,11 @@ const Nav = () => {
         <div>
             <NavLog></NavLog>
             <div className="nav">
-                <HashLink smooth to="/">Start</HashLink>
-                <HashLink smooth to="/#whatIsItAbout">O co chodzi?</HashLink>
-                <HashLink smooth to="/#aboutUs">O nas</HashLink>
-                <HashLink smooth to="/#whoWeHelp">Fundacja i organizacje</HashLink>
-                <HashLink smooth to="/#homeContact">Kontakt</HashLink>
+                <HashLink smooth to="/" className="nav_link">Start</HashLink>
+                <HashLink smooth to="/#whatIsItAbout" className="nav_link">O co chodzi?</HashLink>
+                <HashLink smooth to="/#aboutUs" className="nav_link">O nas</HashLink>
+                <HashLink smooth to="/#whoWeHelp" className="nav_link">Fundacja i organizacje</HashLink>
+                <HashLink smooth to="/#homeContact" className="nav_link">Kontakt</HashLink>
             </div>
         </div>
     )

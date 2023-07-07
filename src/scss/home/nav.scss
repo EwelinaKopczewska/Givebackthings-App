@@ -1,0 +1,18 @@
+.nav{
+    width: 100vh;
+    font-size: 18px;
+    margin-top: 34px;
+    display: flex;
+    justify-content: flex-end;
+
+    .nav_link{
+        color: $color-grey;
+        margin-left: 55px;
+        padding: 10px;
+
+        &:hover{
+            border: 0.75px solid $color-darkgrey;
+            padding: 9px;
+        }
+    }
+}

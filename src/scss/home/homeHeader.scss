@@ -1,0 +1,46 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    color: $color-darkgrey;
+
+    .header_img{
+        margin-left: -483px;
+    }
+
+    .header_container{
+       
+        .header_box{
+            display :flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 219px;
+
+            .header_title{
+                font-size: 38px;
+                text-align: center;
+            }
+
+            .header_icon{
+                margin-top: 25px;
+            }
+
+            .header_btn{
+                margin-top: 65px;
+                
+                .header_btn-first{
+                    font-size: 36px;
+                    padding: 13px 93px;
+                    font: normal normal 300 36px/45px $font-base;
+                    margin-right: 44px;
+                }
+
+                .header_btn-second{
+                    font-size: 36px;
+                    padding: 13px 51px;
+                    font: normal normal 300 36px/45px $font-base;
+                }
+            }    
+        }
+    }
+}

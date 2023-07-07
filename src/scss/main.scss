@@ -5,11 +5,23 @@
 
 body {
     font-family: $font-base;
+    width: 1900px;
+    height: 5080px;
 
     a {
         text-decoration: none;
     }
+
+    .btn{
+        background-color: white;
+        border: 0.75px solid $color-darkgrey;
+        color: $color-darkgrey;
+        cursor: pointer;
+    }
 }
+
+
 
 @import "./home/nav.scss";
 @import "./home/navLog.scss";
+@import "./home/homeHeader.scss";
