@@ -1,0 +1,35 @@
+.container_threecolumns{
+    height: 384px;
+    background-color: $color-orange;
+    display: flex;
+    justify-content: space-around;
+
+    .threecolumns-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .threecolumns_number{
+            font-size: 90px;
+            font-weight: 300;
+            color: $color-green;
+        }
+
+        .threecolumns_title{
+            margin-top: 10px;
+            font-size: 18px;
+            color: $color-darkgrey;
+        }
+
+        .threecolumns_text{
+            width: 334px;
+            margin-top: 28px;
+            font: normal normal 300 16px $font-alt;
+            text-align: center;
+            letter-spacing: -0.32px;
+            line-height: 22.7px;
+            color: $color-darkgrey;
+        }
+    }
+}
