@@ -1,0 +1,79 @@
+.container_home4EasySteps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+    color: $color-darkgrey;
+
+    .home4EasySteps_title{
+        font-size: 38px;
+        letter-spacing: -0.76px;
+    }
+
+    .decoration{
+        margin-top: 38px;
+        margin-bottom: 41px;
+        margin-left: 80px;
+    }
+
+    .container_home4EasySteps-box{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background: #F0F1F1 0% 0% no-repeat padding-box;
+       
+        .container_home4EasySteps-boxes{
+            margin: 0 70px;
+
+            .icon{
+                margin-left: 25px;
+                margin-top: 73px;
+            }
+
+            .step-title{
+                font-size: 18px;
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                position: relative;
+
+                &::after{
+                    content:"";
+                    width: 70px;
+                    height: 1px;
+                    background-color: $color-darkgrey;
+                    position: absolute;
+                    bottom: -10px;
+                    left: 32px;
+                }
+            }
+
+            .step-text{
+                font-size: 16px;
+                margin-top: 21px;
+                margin-bottom: 62px;
+                text-align: center;
+            }
+
+            .icon-four{
+                margin-left: 35px;
+            }
+
+            .step-four{
+                &::after{
+                    content:"";
+                    left: 45px;
+                }
+            }
+        }
+    } 
+
+    .home4EasySteps_btn{
+        font-size: 36px;
+        padding: 13px 93px;
+        font: normal normal 300 36px/45px $font-base;
+        margin-top: 35px;
+        margin-bottom: 80px;
+    }
+}
