@@ -3,6 +3,7 @@
 
     .homeAboutUs-box{
         width: 958px;
+        height: 935px;
         background-color: $color-lightgrey;
         color: $color-darkgrey;
         display: flex;
@@ -35,6 +36,9 @@
     }
 
     .people_img{
-        margin-right:-300px;
+        width: 942px;
+       background-image: url(../../assets/People.jpg);
+       background-position: left;
+       background-repeat: no-repeat;
     }
 }

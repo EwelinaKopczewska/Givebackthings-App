@@ -1,5 +1,4 @@
 import React from "react";
-import People from "../../assets/People.jpg"
 import Decoration from "../../assets/Decoration.svg"
 import Signature from "../../assets/Signature.svg"
 
@@ -12,7 +11,7 @@ const HomeAboutUs = () => {
             <p className = "homeAboutUs_text">Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
             <img src={Signature} className= "signature" alt="Signarure"/>
         </div>
-        <img src={People} className= "people_img" alt="People"/> 
+        <div className="people_img"></div>
     </div>
     )
 }
