@@ -1,0 +1,69 @@
+.whoWeHelpPaginationContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-darkgrey;
+
+    .whoWeHelpText{
+        max-width: 600px;
+        text-align: center;
+        font-size:22px;
+        line-height: 30px;
+    }
+
+    .items {
+        width: 1344px;
+        height: 345px;
+        margin-top: 32px;
+        color: $color-darkgrey;
+
+        .itemContainer {
+        width: 1344px;
+        height: 115px;
+        border-bottom: 0.75px solid #3C3C3C;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .itemLeftBox {
+                .nameOrganization {
+                font-size: 26px;
+                line-height: 31px;
+                margin-bottom: 6px;
+                }
+
+                .goalsOrganization {
+                font-size: 18px;
+                line-height: 22px;
+                }
+            }
+
+            .itemRightBox {
+                font-weight: 300;
+            }
+        }
+    }
+      
+    .pagination {
+        width: 155px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 29px;
+
+        .page-item {
+            padding: 15px 13px;
+            color: $color-darkgrey;
+        }
+        
+        .active {
+            border: 1px solid #707070;
+        }
+    }
+}

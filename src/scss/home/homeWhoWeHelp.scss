@@ -1,0 +1,36 @@
+.container_homewhowehelp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 72px;
+    color: $color-darkgrey;
+
+    .homewhowehelp-title{
+        font-size: 38px;
+        margin-bottom: 39px;
+    }
+
+    .decoration{
+        margin-left: 30px;
+    }
+
+    .homewhowehelp_buttons{
+        display: flex;
+        margin-top: 50px;
+
+        .whoWeHelpButton{
+            font-size: 24px;
+            text-align: center;
+            margin-right: 55px;
+            margin-left: 55px;
+            padding: 23px 43px;
+            margin-bottom: 80px;
+
+            &:active{
+                border: 0.75px solid #3C3C3C;
+                padding: 22px 42px;
+            }
+        }
+    }
+}
