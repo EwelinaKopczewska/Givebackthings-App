@@ -5,7 +5,7 @@ function Items({ currentItems }) {
     return (
         <div className="items">
             {currentItems && currentItems.map((item) => (
-                <div className="itemContainer">
+                <div key={item.nameOrganization} className="itemContainer">
                     <div className="itemLeftBox">
                         <div className="nameOrganization">
                             { item.nameOrganization }
@@ -29,6 +29,10 @@ function PaginatedItems(props) {
     const [itemOffset, setItemOffset] = useState(0);
 
     useEffect(() => {
+        setItemOffset(0 * props.itemsPerPage % props.listOfItems.length)
+    }, [ props.itemsPerPage, props.listOfItems]);
+
+    useEffect(() => {
         const endOffset = itemOffset + props.itemsPerPage;
         setCurrentItems(props.listOfItems.slice(itemOffset, endOffset));
         const calcPageCount = Math.ceil(props.listOfItems.length / props.itemsPerPage);
@@ -43,7 +47,7 @@ function PaginatedItems(props) {
         const newOffset = event.selected * props.itemsPerPage % props.listOfItems.length;
         setItemOffset(newOffset);
     };
-
+  
     return (
         <>
             <Items currentItems={currentItems} />

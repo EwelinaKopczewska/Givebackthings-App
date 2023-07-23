@@ -6,7 +6,6 @@
 body {
     font-family: $font-base;
     width: 1900px;
-    height: 5080px;
 
     a {
         text-decoration: none;
@@ -30,3 +29,6 @@ body {
 @import "./home/homeAboutUs.scss";
 @import "./home/homeWhoWeHelp.scss";
 @import "./home/whoWeHelpOrganization.scss";
+@import "./home/homeContact.scss";
+
+@import "./signIn.scss";
