@@ -1,0 +1,17 @@
+.container_sign{
+
+    .sign_box{
+        .logOut_title{
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 39px;
+            line-height: 50px;
+        }
+
+        .logOut_button{
+            border: 0.75px solid $color-darkgrey;
+            padding: 13px 17px;
+            color: black;
+        }
+    }
+}

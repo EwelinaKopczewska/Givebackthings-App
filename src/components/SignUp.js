@@ -7,6 +7,7 @@ import app from "../firebase"
 import Nav from "./Home/Nav"
 
 const SignUp = () => {
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -76,7 +77,7 @@ const SignUp = () => {
             </div>
             <div className="sign_buttons">
             <Link to="/logowanie" className="button_signin" style={{marginRight: "308px"}}>Zaloguj się</Link>
-            <Link to="/rejestracja" className="button_signup" onClick={() => createUserWithEmailAndPassword(email, password)} >Załóż konto</Link>
+            <Link to="/" className="button_signup" onClick={() => createUserWithEmailAndPassword(email, password)} >Załóż konto</Link>
             </div>
         </div>
         </div>

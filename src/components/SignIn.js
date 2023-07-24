@@ -10,8 +10,6 @@ const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-
-
   const auth = getAuth(app);
 
   const [
@@ -40,6 +38,7 @@ const SignIn = () => {
       </div>
     );
   }
+
   return (
     <div className="container_sign">
 
@@ -58,6 +57,7 @@ const SignIn = () => {
                 onChange={(e) => setEmail(e.target.value)}
               /> 
             </label>
+            {/* <div style={{color:"red" , marginTop: "10px"}}>{errors.email}</div> */}
             <label className="sign_text">Hasło
               <input
               className="sign_input" 
@@ -66,11 +66,12 @@ const SignIn = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </label>
+            {/* <div style={{color:"red" , marginTop: "10px"}}>{errors.password}</div> */}
           </div>
         </div>
         <div className="sign_buttons">
           <Link to="/rejestracja" className="button_signup" style={{marginRight: "308px"}} >Załóż konto</Link>
-          <Link to="/" className="button_signin" onClick={() => createUserWithEmailAndPassword(email, password)}>Zaloguj się</Link>
+          <Link to="/" className="button_signin" onClick={() => createUserWithEmailAndPassword(email, password)} >Zaloguj się</Link>
         </div>
       </div>
     </div>

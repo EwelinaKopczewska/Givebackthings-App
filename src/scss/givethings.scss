@@ -1,0 +1,39 @@
+.container_givethings{
+    width: 1758px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $color-darkgrey;
+
+    .givethings_box{
+        margin-top: 134px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .givethings_title{
+            font-size: 38px;
+            letter-spacing: -0.76px;
+            text-align: center;
+            margin-bottom: 31px;
+        }
+
+        .givethings_text{
+            font-size: 40px;
+            font-weight: 300;
+            margin-top: 41px;
+        }
+
+        .givethings_steps{
+            display: flex;
+
+            .givethings_step{
+                text-align: center;
+                border: 0.75px solid #3C3C3C;
+            }
+        }
+    }
+
+    
+}

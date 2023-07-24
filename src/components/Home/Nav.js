@@ -1,13 +1,11 @@
 import React from "react";
 import { HashLink } from 'react-router-hash-link';
 import NavLog from "./NavLog";
-import { useContext } from "react";
-import { AuthContext } from "../../App";
+
 
 const Nav = () => {
-    const user = useContext(AuthContext)
+    
 
-    console.log(user)
     return (
         <div className="containerNav">
             <NavLog></NavLog>
