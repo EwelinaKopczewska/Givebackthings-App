@@ -1,4 +1,4 @@
-import React , { useState } from 'react';
+import React , { useState , useEffect } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { getAuth } from "firebase/auth";
 import {Link } from "react-router-dom";
@@ -10,7 +10,22 @@ const SignUp = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [passwordRepeat, setPasswordRepeat] = useState('');
 
+
+    const [emailError, setEmailError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const [passwordErrorRepeat, setPasswordErrorRepeat] = useState(false);
+
+    const changeEmail = (event) => {
+        setEmail(event.target.value);
+    }
+    const changePassword = (event) => {
+        setPassword(event.target.value);
+    }
+    const changeRepeatPassword = (event) => {
+        setPasswordRepeat(event.target.value);
+    }
     const auth = getAuth(app);
 
     const [
@@ -20,25 +35,37 @@ const SignUp = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
-    if (error) {
-        return (
-        <div>
-            <p>Error: {error.message}</p>
-        </div>
-        );
-    }
+    useEffect(() => {
+        if (error) {
+        
+          if (error.code.includes('email')) {
+            setEmailError(error.message);
+            setPasswordError('');
+            setPasswordErrorRepeat('');
+          } else if (error.code.includes('password')) {
+            setPasswordError(error.message);
+            setEmailError('');
+            setPasswordErrorRepeat('');
+          } 
+        }
+    },[error , password , passwordRepeat]);
+
+    useEffect(() => {
+        if (password !== passwordRepeat) {
+            setPasswordErrorRepeat(true);
+        } else {
+            setPasswordErrorRepeat(false);
+        }
+    }, [password, passwordRepeat]);
+
+      console.log(passwordErrorRepeat)
+    console.log(password)
+    console.log(passwordRepeat)
 
     if (loading) {
         return <p>Loading...</p>;
     }
 
-    if (user) {
-        return (
-        <div>
-            <p>Registered User: {user.user.email}</p>
-        </div>
-        );
-    }
     return (
         <div className="container_sign">
 
@@ -48,37 +75,43 @@ const SignUp = () => {
             <p className="sign_title">Załóż konto</p>
             <img src={Decoration} className= "decoration" alt="Decoration"/>
             <div className="sign_box-input">
-                <div className="sign_container">
+                <form className="sign_container">
                     <label className="sign_text" >Email
                     <input
-                        className="sign_input" 
+                        className={`sign_input ${emailError? 'error_border' : ''}`}
                         type="email"
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={changeEmail}
                     /> 
                     </label>
+                    { emailError ? <div className = "errorEmail" >Podany mail już istnieje!</div> : "" }
                     <label className="sign_text">Hasło
                     <input
-                    className="sign_input" 
+                        className={`sign_input ${passwordError? 'error_border' : ''}`} 
                         type="password"
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={changePassword}
                     />
                     </label>
+                    {passwordError ? <div className = "errorEmail" >Podane hasło jest za krótkie!</div> : "" }
                     <label className="sign_text">Powtórz hasło
                     <input
-                    className="sign_input" 
+                        className={`sign_input ${passwordErrorRepeat? 'error_border' : ''}`}
                         type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        value={passwordRepeat}
+                        onChange={changeRepeatPassword }
                     />
                     </label>
-                </div>
+                    { passwordErrorRepeat && <div className = "errorEmail" >Hasła muszą być takie same!</div> }
+                    <div className="sign_buttons">
+                        {user ? <><Link to="/logowanie" className="button_signin" style={{marginRight: "308px"}}>Zaloguj się</Link>
+                        <Link to="/" className="button_signup" onClick={() => createUserWithEmailAndPassword(email, password)} >Załóż konto</Link> </> 
+                        :<><Link to="/logowanie" className="button_signin" style={{marginRight: "308px"}}>Zaloguj się</Link>
+                        <Link to="/rejestracja" className="button_signup" onClick={() => createUserWithEmailAndPassword(email, password)} >Załóż konto</Link></>}
+                    </div>
+                </form>
             </div>
-            <div className="sign_buttons">
-            <Link to="/logowanie" className="button_signin" style={{marginRight: "308px"}}>Zaloguj się</Link>
-            <Link to="/" className="button_signup" onClick={() => createUserWithEmailAndPassword(email, password)} >Załóż konto</Link>
-            </div>
+            
         </div>
         </div>
     );

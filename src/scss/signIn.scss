@@ -24,24 +24,23 @@
             margin-bottom: 67px;
         }
 
-        .sign_box-input{
-            width: 384px;
-            height: auto;
-            background-color: $color-lightgrey;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
+        
             .sign_container{
-                margin-top: 40px;
-                margin-bottom: 40px;
+                background-color: $color-lightgrey;
+                width: 384px;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
 
                 .sign_text{
                 font-size: 16px;
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 31px;
+                margin-top: 30px;
 
                     .sign_input{
                         width: 250px;
@@ -50,35 +49,52 @@
                         border-bottom: 1px solid #707070;
                         background-color: $color-lightgrey;
                     }
+
+                    .error_border {
+                        border: none;
+                        border-bottom: 1px solid red;
+                    }
+                }
+
+                .errorEmail{
+                    color:red;
+                    margin-top:-25px;
+                    margin-bottom: 30px;
+                    font-size: 15px;
+                }
+
+                .sign_buttons{
+                    margin-top: 30px;
+                    font-size: 18px;
+                    background-color: WHITE;
+                    display: flex;
+                    padding: 20px;
+                    
+                    .button_signup{
+                        width: 117px;
+                        padding: 10px;
+                        color: #000000;
+        
+                        &:hover{
+                            border: 0.75px solid $color-darkgrey;
+                            padding: 9px;
+                        }
+                    }
+        
+                    .button_signin{
+                        width: 117px;
+                        padding: 10px;
+                        font-size: 18px;
+                        color: #000000;
+                        background-color: white;
+        
+                        &:hover{
+                            border: 0.75px solid $color-darkgrey;
+                            padding: 9px;
+                        }
+                    }
                 }
             }
-            
-        }
-
-        .sign_buttons{
-            margin-top: 30px;
-            font-size: 18px;
-            
-            .button_signup{
-                padding: 10px;
-                color: #000000;
-
-                &:hover{
-                    border: 0.75px solid $color-darkgrey;
-                    padding: 9px;
-                }
-            }
-
-            .button_signin{
-                padding: 10px;
-                font-size: 18px;
-                color: #000000;
-
-                &:hover{
-                    border: 0.75px solid $color-darkgrey;
-                    padding: 9px;
-                }
-            }
-        }
+        
     }
 }

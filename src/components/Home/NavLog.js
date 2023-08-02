@@ -3,26 +3,22 @@ import {Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../App";
 import { getAuth, signOut } from "firebase/auth";
+import app from "../../firebase";
 
 const NavLog = () => {
-    const user = useContext(AuthContext)
-
-    console.log(user)
-
+    const user = useContext(AuthContext);
+    
     const handleLogout = () => {
-        const auth = getAuth();
+        const auth = getAuth(app);
 
         signOut(auth).then(() => {
-
-          }).catch((error) => {
-
-          });
-        setUser(null);
+            user(null);
+        }).catch((error) => {
+            console.log(error)
+        });
     };
     
-
     const email = user ?  user.email : '';
-
 
     return (
         <div className="navLog">
