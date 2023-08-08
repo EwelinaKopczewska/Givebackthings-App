@@ -19,20 +19,20 @@ const GiveThings = () => {
                         <p className= "givethings_text">Wystarczą 4 proste kroki:</p>
                         <div className="givethings_steps">
                             <div className="givethings_step">
-                                <p>1</p>
-                                <p>Wybierz rzeczy</p>
+                                <p className="givethings_step-number">1</p>
+                                <p className="givethings_step-title">Wybierz rzeczy</p>
                             </div>
                             <div className="givethings_step">
-                                <p>2</p>
-                                <p>Spakuj je w worki</p>
+                                <p className="givethings_step-number">2</p>
+                                <p className="givethings_step-title">Spakuj je w worki</p>
                             </div>
                             <div className="givethings_step">
-                                <p>3</p>
-                                <p>Wybierz fundację</p>
+                                <p className="givethings_step-number">3</p>
+                                <p className="givethings_step-title">Wybierz fundację</p>
                             </div>
                             <div className="givethings_step">
-                                <p>4</p>
-                                <p>Zamów kuriera</p>
+                                <p className="givethings_step-number">4</p>
+                                <p className="givethings_step-title">Zamów kuriera</p>
                             </div>
                         </div>
                     </div>

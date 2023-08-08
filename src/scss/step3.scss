@@ -1,0 +1,54 @@
+.step3_container{
+    margin-left: 143px;
+    margin-top: 70px;
+
+    .step3_location{
+        display: flex;
+        flex-direction: column;
+
+        .step3_location-title{
+            font-size: 36px;
+            margin-bottom: 28px;
+        }
+
+        .step3_location-select{
+            width: 300px;
+            height: 49px;
+            font: normal normal 300 24px/33px $font-base;
+            margin-bottom: 50px;
+        }
+    }
+
+    .step3_help{
+        .step3_help-title{
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .step3_help-btn{
+            font: normal normal 300 24px/32px $font-base;
+            margin-right: 24px;
+            margin-bottom: 24px;
+            border: 0.75px solid #3C3C3C;
+
+            &:hover{
+                background-color: $color-orange;
+            }
+        }
+    }
+
+    .step3_organization{
+
+        .step3_organization-title{
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .step3_organization-input{
+            width: 570px;
+            height: 40px;
+            margin-bottom: 85px;
+        }
+    }
+}

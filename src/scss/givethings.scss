@@ -6,7 +6,7 @@
     color: $color-darkgrey;
 
     .givethings_box{
-        margin-top: 134px;
+        margin-top: 84px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -27,10 +27,34 @@
 
         .givethings_steps{
             display: flex;
+            
 
             .givethings_step{
+                width: 190px;
+                height: 190px;
+                margin-top: 60px;
                 text-align: center;
                 border: 0.75px solid #3C3C3C;
+                transform: rotate(45deg);
+
+                .givethings_step-number{
+                    font-size: 32px;
+                    color: #3C3C3C;
+                    transform: rotate(315deg);
+                    margin-top: 20px;
+                    margin-right: 120px;
+                }
+
+                .givethings_step-title{
+                    width: 100px;
+                    margin-top: 30px;
+                    margin-left: 50px;
+                    text-align: center;
+                    font-size: 22px;
+                    color: #3C3C3C;
+                    transform: rotate(315deg);
+                    
+                }
             }
         }
     }

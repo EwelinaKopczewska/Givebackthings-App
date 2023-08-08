@@ -1,0 +1,22 @@
+.steps_container{
+    height: 883px;
+    background-image: url(../assets/Background-Form.jpg);
+    background-position: center;
+
+    .steps_number{
+       padding-top: 36px;
+       padding-left: 142px;
+       font-size: 24px;
+       color: $color-darkgrey;
+    }
+
+    .stepsbtn{
+        width: 180px;
+        height: 79px;
+        font-size:24px;
+        background-color: transparent;
+        margin-left: 50px;
+        margin-top: 100px;
+        margin-left: 143px;
+    }
+}

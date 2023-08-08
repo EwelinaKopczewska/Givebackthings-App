@@ -1,0 +1,40 @@
+.step4_container{
+    margin-left: 143px;
+    margin-top: 70px;
+    
+    .step4_title{
+        font: normal normal 600 36px/45px $font-base;
+        margin-bottom: 50px;
+    }
+
+    .step4_container-box{
+        display: flex;
+        flex-direction: row;
+
+        .step4_box{
+            display: flex;
+            flex-direction: column;
+            margin-right: 152px;
+            margin-bottom: 42px;
+
+            .step4_text{
+                font: normal normal 600 24px/45px $font-base;
+                margin-bottom: 20px;
+            }
+
+            .step4_label{
+                margin-bottom: 20px;
+                font: normal normal 300 24px/32px $font-base;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                
+                .step4_input{
+                    width: 256px;
+                    height: 40px;
+                    margin-left: 35px;
+                }
+            }
+        }
+    } 
+}

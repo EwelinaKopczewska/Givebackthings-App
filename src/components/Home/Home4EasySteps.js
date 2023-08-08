@@ -1,6 +1,7 @@
 import React from "react";
 import {Link } from "react-router-dom";
-
+import { useContext } from "react";
+import { AuthContext } from "../../App";
 import Decoration from "../../assets/Decoration.svg"
 import Icon1 from "../../assets/Icon-1.svg"
 import Icon2 from "../../assets/Icon-2.svg"
@@ -8,6 +9,8 @@ import Icon3 from "../../assets/Icon-3.svg"
 import Icon4 from "../../assets/Icon-4.svg"
 
 const Home4EasySteps = () => {
+    const user = useContext(AuthContext);
+
     return (
     <div id="whatIsItAbout" className = "container_home4EasySteps">
         <div>
@@ -36,7 +39,7 @@ const Home4EasySteps = () => {
                 <p className= "step-text" >kurier przyjedzie <br></br>w dogodnym terminie</p>
             </div>
         </div>
-        <Link to="/logowanie"><button className= "home4EasySteps_btn btn ">ODDAJ<br></br>RZECZY</button></Link>
+        {user ? <Link to="/oddajrzeczy"><button className= "home4EasySteps_btn btn ">ODDAJ<br></br>RZECZY</button></Link>:<Link to="/logowanie"><button className= "home4EasySteps_btn btn ">ODDAJ<br></br>RZECZY</button></Link>}
     </div>
     )
 }

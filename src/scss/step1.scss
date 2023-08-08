@@ -1,0 +1,32 @@
+.step_container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 143px;
+    margin-top: 70px;
+
+    .step1_title{
+        font-size: 34px;
+        font-weight: 600;
+        margin-bottom: 40px;
+    }
+
+    .step1_text{
+        display: flex;
+        align-items: center;   
+        font-size: 24px;
+        font-weight: 300;
+        margin-bottom: 40px;
+
+        .step1_input{
+            width: 40px;
+            height: 40px;
+            margin-right: 30px;  
+            background-color: transparent;   
+            
+            &:checked{
+                background-color: orange;
+            }
+        }
+    }
+}
+
